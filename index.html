@@ -1,0 +1,89 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/ML Student Performance Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+ <header>
+   <img src="assets/logo.png" alt="StudySpectrum Logo" class="logo">
+
+    <h1>STUDYSPECTRUM</h1>
+    <p>Welcome, Teachers! Your intelligent partner in modern classroom evaluation.</p>
+    <div class="badge">Machine Learning | Logistic Regression</div>
+</header>
+
+        <div class="main-content">
+            <div class="card">
+                <h2> Enter Student Data</h2>
+                <div class="form">
+                    <div class="input-group">
+                        <label>Student ID:</label>
+                        <input type="text" id="studentId" placeholder="e.g., STU001">
+                    </div>
+                    
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Internal Test 1 (0-40):</label>
+                            <input type="number" id="test1" min="0" max="40">
+                        </div>
+                        <div class="input-group">
+                            <label>Internal Test 2 (0-40):</label>
+                            <input type="number" id="test2" min="0" max="40">
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Assignment Score (0-10):</label>
+                        <input type="number" id="assignment" min="0" max="10">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Attendance (%):</label>
+                        <input type="number" id="attendance" min="0" max="100" step="0.1">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Study Hours per Day:</label>
+                        <input type="number" id="studyHours" min="0" max="24" step="0.5">
+                    </div>
+                    
+                    <button onclick="makePrediction()" class="btn-predict">
+                         Predict with AI
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2> AI Prediction Results</h2>
+                <div id="results" class="results-empty">
+                    <p> Enter student data and click predict to see AI-powered results</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Prediction Statistics</h2>
+            <div id="statistics" class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Total Predictions</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>BCA Project | Ananya, Gauthami, Gloria Nazareth</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

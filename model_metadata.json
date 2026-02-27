@@ -1,0 +1,18 @@
+{
+  "model_type": "Logistic Regression",
+  "accuracy": 0.9,
+  "classes": [
+    "Average",
+    "Excellent",
+    "Good"
+  ],
+  "features": [
+    "Attendance",
+    "Internal Test 1",
+    "Internal Test 2",
+    "Assignment",
+    "Study Hours"
+  ],
+  "training_samples": 80,
+  "test_samples": 20
+}
